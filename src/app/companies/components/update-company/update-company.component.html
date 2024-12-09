@@ -1,0 +1,18 @@
+<div class="container">
+    <h2>Update Company</h2>
+    <form (ngSubmit)="updateCompany()" [formGroup]="companyForm">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" formControlName="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" formControlName="email" required>
+        </div>
+        <div class="form-group">
+            <label for="branchAddress">Branch Address</label>
+            <input type="text" class="form-control" id="branchAddress" formControlName="branchAddress" required>
+        </div>
+        <button type="submit" class="btn btn-primary my-2">Update</button>
+    </form>
+</div>

@@ -1,0 +1,27 @@
+<div class="container">
+    <h2>Company List</h2>
+    <button class="btn btn-success" (click)="navigateToCreateCompany()">Create Company</button>
+    <button class="btn btn-warning mx-2" (click)="navigateToBranches()">Branches</button>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Branch Address</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let company of companies">
+                <td>{{ company.name }}</td>
+                <td>{{ company.email }}</td>
+                <td>{{ company.branchAddress }}</td>
+                <td>
+                    <button class="btn btn-primary" (click)="updateCompany(company.id)">Update</button>
+                    <button class="btn btn-danger mx-2" (click)="deleteCompany(company.id)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

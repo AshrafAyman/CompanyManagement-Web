@@ -1,0 +1,21 @@
+<div class="container">
+    <h2>Branch List</h2>
+    <button class="btn btn-warning" (click)="navigateToCompanies()">Companies</button>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Branch Address</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let branch of branches">
+                <td>{{ branch.branchAddress }}</td>
+                <td>
+                    <button class="btn btn-primary" (click)="updateBranch(branch.id)">Update</button>
+                    <button class="btn btn-danger mx-2" (click)="deleteBranch(branch.id)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
